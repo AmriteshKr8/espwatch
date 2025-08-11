@@ -183,7 +183,7 @@ String ssid;
 String pass;
 
 const char* ap_ssid = "ESPWATCH";
-const char* ap_password = "ESWT2048";
+const char* ap_password = "<espwatch-pass>";
 
 const int UP = D2;
 const int DOWN = D4;
@@ -254,8 +254,8 @@ RTC_DATA_ATTR int boot = 0;
 unsigned long epoch = 0;
 int selectedIndex = 0;
 
-const char* apiKey = "kl9Kk7HUHliXy2FEhAf8XQ81KudERdNr";
-const char* location = "Jamshedpur";
+const char* apiKey = "<api-key>";
+const char* location = "<city>";
 const char* units = "metric";
 
 // pong_start
