@@ -33,3 +33,8 @@
   - backplate - 1
   - button-unmarked - 3
   - cage - 1
+
+# Schematic:
+<img width="396" height="349" alt="image" src="https://github.com/user-attachments/assets/655c699a-2bfa-44a9-8700-86a684ac3654" />
+
+https://easyeda.com/editor#project_id=a65a7b23be7d4b2380da87abd1f7d38c
