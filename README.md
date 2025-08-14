@@ -1,7 +1,47 @@
 # Note:
  - Use 24-30AWG wire for display power lines
  - Only use signal wires for display signals
-
+ - Install all libraries from arduino library manager
+ - Move the "User_setup.h" to "arduino sketch folder"/libraries/TFT_eSPI/User_setup.h
+ - Edit lines:
+     - 185: const char* ap_ssid = "ESPWATCH"; // add your watch hotspot ssid
+     - 186: const char* ap_password = "<espwatch-pass>"; // add your hotspot password
+     - 249: ESP32Time rtc(19800); // set utc offset in seconds
+ - First Setup:
+     - Hold the up button
+     - Navigate to wifi > host_cp
+     - Connect to the hotspot ssid you entered earlier using the password you created
+     - Click "Create new file" and create the following files with the given contents, mind the case sensitivity:
+          - wpa_creds.txt
+            
+                <SSID1>:<PASSWORD>
+                <SSID2>:<PASSWORD>
+  
+            Note: You can add a max of 5 different ssids
+       
+          - battery_stats:
+     
+                2000
+       
+            Note: you can enter any number between 1000-2000, it'll be overwritten by the system soon
+            
+          - weather_cache.txt:
+            Note: leave this file blank
+            
+     - Press Sel on the watch to shut down server
+     - Select exit twice to shut the watch down
+     - Hold the Sel on the watch, select a network and sync ( it'll take a few tries )
+     - Wait for the watch to go to sleep
+     - Battery calibration:
+       - Charge the battery fully
+       - Hold the Sel and down button to boot the watch
+       - The temperature reading is replaced by the current battery reading
+       - The reading is added to the "battery_status" file automatically
+       - Its recommended to calibrate the battery once every few days or optimally after each charge.
+- Note:
+  - the battery life on this watch is not very good.
+  - its very hard to assemble.
+  - the watch needs to be synced every time it loses power.
 # 3D Files:
 - body: https://www.printables.com/model/1381299-espwatch
 - Strap: https://www.printables.com/model/1030042-24mm-universal-linked-watch-band
